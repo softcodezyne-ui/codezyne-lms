@@ -60,7 +60,11 @@ export default function ExamModal({ open, exam, onClose, onSuccess }: ExamModalP
         instructions: exam.instructions || '',
         startDate: exam.startDate ? new Date(exam.startDate).toISOString().slice(0, 16) : '',
         endDate: exam.endDate ? new Date(exam.endDate).toISOString().slice(0, 16) : '',
-        course: exam.course?._id?.toString() || 'none',
+        course: (() => {
+          const c = exam.course as { _id?: { toString(): string }; toString(): string } | undefined;
+          if (!c) return 'none';
+          return c._id ? c._id.toString() : c.toString();
+        })(),
         questions: exam.questions?.map((q: any) => {
           // Handle different question data structures
           if (typeof q === 'string') {

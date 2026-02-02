@@ -115,46 +115,47 @@ const QuestionSchema = new Schema<IQuestion>({
 });
 
 // Virtual for correct options count
-QuestionSchema.virtual('correctOptionsCount').get(function() {
-  if (this.type === 'mcq' && this.options) {
-    return this.options.filter(option => option.isCorrect).length;
+QuestionSchema.virtual('correctOptionsCount').get(function(this: unknown) {
+  const doc = this as IQuestion;
+  if (doc.type === 'mcq' && doc.options) {
+    return doc.options.filter(option => option.isCorrect).length;
   }
   return 0;
 });
 
 // Virtual for total options count
-QuestionSchema.virtual('totalOptionsCount').get(function() {
-  return this.options ? this.options.length : 0;
+QuestionSchema.virtual('totalOptionsCount').get(function(this: unknown) {
+  const doc = this as IQuestion;
+  return doc.options ? doc.options.length : 0;
 });
 
 // Validation for MCQ questions
-QuestionSchema.pre('save', function(next) {
-  if (this.type === 'mcq') {
-    if (!this.options || this.options.length < 2) {
-      return next(new Error('MCQ questions must have at least 2 options'));
+QuestionSchema.pre('save', async function() {
+  const doc = this as IQuestion;
+  if (doc.type === 'mcq') {
+    if (!doc.options || doc.options.length < 2) {
+      throw new Error('MCQ questions must have at least 2 options');
     }
-    if (this.options.length > 6) {
-      return next(new Error('MCQ questions cannot have more than 6 options'));
+    if (doc.options.length > 6) {
+      throw new Error('MCQ questions cannot have more than 6 options');
     }
-    const correctOptions = this.options.filter(option => option.isCorrect);
+    const correctOptions = doc.options.filter(option => option.isCorrect);
     if (correctOptions.length === 0) {
-      return next(new Error('MCQ questions must have at least one correct option'));
+      throw new Error('MCQ questions must have at least one correct option');
     }
   }
-  
-  if (this.type === 'true_false') {
-    if (!this.options || this.options.length !== 2) {
-      return next(new Error('True/False questions must have exactly 2 options'));
+
+  if (doc.type === 'true_false') {
+    if (!doc.options || doc.options.length !== 2) {
+      throw new Error('True/False questions must have exactly 2 options');
     }
   }
-  
-  if (this.type === 'written' || this.type === 'essay') {
-    if (!this.correctAnswer || this.correctAnswer.trim().length === 0) {
-      return next(new Error('Written/Essay questions must have a correct answer'));
+
+  if (doc.type === 'written' || doc.type === 'essay') {
+    if (!doc.correctAnswer || doc.correctAnswer.trim().length === 0) {
+      throw new Error('Written/Essay questions must have a correct answer');
     }
   }
-  
-  next();
 });
 
 // Indexes

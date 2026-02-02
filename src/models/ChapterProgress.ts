@@ -85,17 +85,15 @@ ChapterProgressSchema.index({ chapter: 1, isCompleted: 1 });
 ChapterProgressSchema.index({ course: 1, isCompleted: 1 });
 
 // Pre-save middleware to set completedAt when isCompleted becomes true
-ChapterProgressSchema.pre('save', function(next) {
-  if (this.isModified('isCompleted') && this.isCompleted && !this.completedAt) {
-    this.completedAt = new Date();
+ChapterProgressSchema.pre('save', async function() {
+  const doc = this as unknown as IChapterProgress;
+  if (doc.isModified('isCompleted') && doc.isCompleted && !doc.completedAt) {
+    doc.completedAt = new Date();
   }
-  
-  // Update progress percentage based on completed lessons
-  if ((this as any).totalLessons > 0) {
-    (this as any).progressPercentage = Math.round(((this as any).completedLessons / (this as any).totalLessons) * 100);
+
+  if (doc.totalLessons > 0) {
+    doc.progressPercentage = Math.round((doc.completedLessons / doc.totalLessons) * 100);
   }
-  
-  next();
 });
 
 const ChapterProgress = mongoose.models.ChapterProgress || mongoose.model<IChapterProgress>('ChapterProgress', ChapterProgressSchema);

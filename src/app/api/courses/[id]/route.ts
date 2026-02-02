@@ -238,7 +238,7 @@ console.log('API: Instructor:', instructor);
     };
 
     // Revalidate courses cache
-    revalidateTag('courses');
+    revalidateTag('courses', 'max');
 
     return NextResponse.json({
       success: true,
@@ -314,7 +314,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     await Course.findByIdAndDelete(id);
 
     // Revalidate courses cache
-    revalidateTag('courses');
+    revalidateTag('courses', 'max');
 
     return NextResponse.json({
       success: true,

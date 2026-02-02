@@ -64,9 +64,9 @@ const LessonReviewSchema = new Schema<ILessonReview>({
     trim: true,
     maxlength: [1000, 'Comment cannot exceed 1000 characters'],
     validate: {
-      validator: function(this: ILessonReview, value: string) {
-        // Comment is required for text reviews
-        if (this.reviewType === 'text' && !value?.trim()) {
+      validator: function(this: unknown, value: string) {
+        const doc = this as ILessonReview;
+        if (doc.reviewType === 'text' && !value?.trim()) {
           return false;
         }
         return true;
@@ -78,9 +78,9 @@ const LessonReviewSchema = new Schema<ILessonReview>({
     type: String,
     trim: true,
     validate: {
-      validator: function(this: ILessonReview, value: string) {
-        // Video URL is required for video reviews
-        if (this.reviewType === 'video' && !value?.trim()) {
+      validator: function(this: unknown, value: string) {
+        const doc = this as ILessonReview;
+        if (doc.reviewType === 'video' && !value?.trim()) {
           return false;
         }
         return true;

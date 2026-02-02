@@ -63,18 +63,17 @@ CourseCategorySchema.virtual('courseCount', {
   count: true
 });
 
-// Pre-save middleware to ensure name is unique and lowercase for comparison
-CourseCategorySchema.pre('save', function(next) {
-  // Check for duplicate names (case insensitive)
-  CourseCategory.findOne({ 
-    name: { $regex: new RegExp(`^${this.name}$`, 'i') },
-    _id: { $ne: this._id }
-  }).then((category: ICourseCategory | null) => {
-    if (category) {
-      return next(new Error('Category name already exists'));
-    }
-    next();
-  }).catch(next);
+// Pre-save middleware to ensure name is unique (case insensitive)
+CourseCategorySchema.pre('save', async function() {
+  const doc = this as ICourseCategory;
+  const existing = await CourseCategory.findOne({
+    name: { $regex: new RegExp(`^${doc.name}$`, 'i') },
+    _id: { $ne: doc._id }
+  });
+
+  if (existing) {
+    throw new Error('Category name already exists');
+  }
 });
 
 const CourseCategory = mongoose.models.CourseCategory || mongoose.model<ICourseCategory>('CourseCategory', CourseCategorySchema);

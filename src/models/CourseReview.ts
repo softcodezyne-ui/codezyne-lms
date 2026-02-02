@@ -86,9 +86,9 @@ const CourseReviewSchema = new Schema<ICourseReview>({
     trim: true,
     maxlength: [1000, 'Comment cannot exceed 1000 characters'],
     validate: {
-      validator: function(this: ICourseReview, value: string) {
-        // Comment is required for text reviews
-        if (this.reviewType === 'text' && !value?.trim()) {
+      validator: function(this: unknown, value: string) {
+        const doc = this as ICourseReview;
+        if (doc.reviewType === 'text' && !value?.trim()) {
           return false;
         }
         return true;
@@ -100,9 +100,9 @@ const CourseReviewSchema = new Schema<ICourseReview>({
     type: String,
     trim: true,
     validate: {
-      validator: function(this: ICourseReview, value: string) {
-        // Video URL is required for video reviews
-        if (this.reviewType === 'video' && !value?.trim()) {
+      validator: function(this: unknown, value: string) {
+        const doc = this as ICourseReview;
+        if (doc.reviewType === 'video' && !value?.trim()) {
           return false;
         }
         return true;
@@ -179,26 +179,20 @@ CourseReviewSchema.virtual('courseInfo', {
 });
 
 // Pre-save middleware to validate enrollment
-CourseReviewSchema.pre('save', async function(next) {
-  try {
-    // Check if student is enrolled in the course
-    const Enrollment = mongoose.model('Enrollment');
-    const enrollment = await Enrollment.findOne({
-      student: this.student,
-      course: this.course,
-      status: { $in: ['active', 'completed'] }
-    });
+CourseReviewSchema.pre('save', async function() {
+  const doc = this as ICourseReview;
+  const Enrollment = mongoose.model('Enrollment');
+  const enrollment = await Enrollment.findOne({
+    student: doc.student,
+    course: doc.course,
+    status: { $in: ['active', 'completed'] }
+  });
 
-    if (!enrollment) {
-      return next(new Error('Student must be enrolled in the course to write a review'));
-    }
-
-    // Set isVerified to true if student is enrolled
-    this.isVerified = true;
-    next();
-  } catch (error) {
-    next(error as Error);
+  if (!enrollment) {
+    throw new Error('Student must be enrolled in the course to write a review');
   }
+
+  doc.isVerified = true;
 });
 
 // Static method to get course rating statistics

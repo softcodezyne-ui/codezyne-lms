@@ -95,8 +95,9 @@ const AssignmentSchema = new Schema<IAssignment>({
     required: [true, 'Passing marks is required'],
     min: [0, 'Passing marks cannot be negative'],
     validate: {
-      validator: function(this: IAssignment, value: number) {
-        return value <= this.totalMarks;
+      validator: function(this: unknown, value: number) {
+        const doc = this as IAssignment;
+        return value <= doc.totalMarks;
       },
       message: 'Passing marks cannot exceed total marks'
     }
@@ -104,9 +105,10 @@ const AssignmentSchema = new Schema<IAssignment>({
   dueDate: {
     type: Date,
     validate: {
-      validator: function(this: IAssignment, value: Date) {
-        if (this.startDate && value) {
-          return value > this.startDate;
+      validator: function(this: unknown, value: Date) {
+        const doc = this as IAssignment;
+        if (doc.startDate && value) {
+          return value > doc.startDate;
         }
         return true;
       },
@@ -116,9 +118,10 @@ const AssignmentSchema = new Schema<IAssignment>({
   startDate: {
     type: Date,
     validate: {
-      validator: function(this: IAssignment, value: Date) {
-        if (this.dueDate && value) {
-          return value < this.dueDate;
+      validator: function(this: unknown, value: Date) {
+        const doc = this as IAssignment;
+        if (doc.dueDate && value) {
+          return value < doc.dueDate;
         }
         return true;
       },
@@ -231,16 +234,17 @@ const AssignmentSchema = new Schema<IAssignment>({
 });
 
 // Virtual for assignment status
-AssignmentSchema.virtual('status').get(function() {
+AssignmentSchema.virtual('status').get(function(this: unknown) {
+  const doc = this as IAssignment;
   const now = new Date();
-  
-  if (!this.isPublished) return 'draft';
-  if (!this.isActive) return 'inactive';
-  if (this.startDate && now < this.startDate) return 'scheduled';
-  if (this.dueDate && now > this.dueDate) return 'expired';
-  if (this.startDate && this.dueDate && now >= this.startDate && now <= this.dueDate) return 'active';
-  if (this.isPublished && this.isActive) return 'published';
-  
+
+  if (!doc.isPublished) return 'draft';
+  if (!doc.isActive) return 'inactive';
+  if (doc.startDate && now < doc.startDate) return 'scheduled';
+  if (doc.dueDate && now > doc.dueDate) return 'expired';
+  if (doc.startDate && doc.dueDate && now >= doc.startDate && now <= doc.dueDate) return 'active';
+  if (doc.isPublished && doc.isActive) return 'published';
+
   return 'draft';
 });
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { LuLayoutDashboard, LuBookOpen as BookOpen, LuUsers as Users, LuMessageSquare as MessageSquare, LuStar as Star, LuSettings as Settings, LuLogOut, LuGraduationCap as GraduationCap, LuFileText as LuFileText, LuChartBar, LuCalendar as Calendar, LuBell, LuAward as Award, LuBookmark, LuClipboardList, LuUserCheck as UserCheck, LuTrendingUp as TrendingUp, LuCircle as HelpCircle, LuHelpCircle, LuShield as Shield, LuTag as Tag, LuLayers as Layers, LuPlay as PlayCircle, LuDollarSign as DollarSign, LuFileCheck, LuTarget as Target, LuDatabase, LuGlobe as Globe } from 'react-icons/lu';;
+import { LuLayoutDashboard, LuBookOpen as BookOpen, LuUsers as Users, LuMessageSquare as MessageSquare, LuStar as Star, LuSettings as Settings, LuLogOut, LuGraduationCap as GraduationCap, LuFileText as LuFileText, LuChartBar, LuCalendar as Calendar, LuBell, LuAward as Award, LuBookmark, LuClipboardList, LuUserCheck as UserCheck, LuTrendingUp as TrendingUp, LuCircleHelp as HelpCircle, LuShield as Shield, LuTag as Tag, LuLayers as Layers, LuPlay as PlayCircle, LuDollarSign as DollarSign, LuFileCheck, LuTarget as Target, LuDatabase, LuGlobe as Globe } from 'react-icons/lu';
 import { useRouter, usePathname } from 'next/navigation';
 import { useAppDispatch, useAppSelector } from '@/lib/hooks';
 import { logoutUser } from '@/lib/slices/authSlice';

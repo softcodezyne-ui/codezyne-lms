@@ -174,7 +174,7 @@ export default function AssignmentSubmissionDataTable({
           key: 'delete',
           label: 'Delete',
           icon: <Trash2 className="w-4 h-4" />,
-          onClick: (s) => onDelete(s),
+          onClick: (s:any) => onDelete(s),
           variant: 'destructive' as const
         }]
       : [])

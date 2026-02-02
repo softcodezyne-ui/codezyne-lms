@@ -3,7 +3,7 @@
 import User, { IUser } from '@/models/User';
 import { Badge } from '@/components/ui/badge';
 import DataTable, { Column, Action } from '@/components/ui/data-table';
-import { LuPencil as Edit, LuTrash2 as Trash2, LuEye as Eye, LuUserCheck as UserCheck, LuUserX as UserX } from 'react-icons/lu';;
+import { LuPencil as Edit, LuTrash2 as Trash2, LuEye as Eye, LuUserCheck as UserCheck, LuUserX as UserX } from 'react-icons/lu';
 import { format } from 'date-fns';
 
 interface UserDataTableProps {
@@ -93,7 +93,7 @@ export default function UserDataTable({
               {user.email}
             </p>
             <div className="flex items-center space-x-4 mt-2 text-xs text-gray-400">
-              <span>ID: {user._id?.slice(-8) || 'N/A'}</span>
+              <span>ID: {user._id ? String(user._id).slice(-8) : 'N/A'}</span>
               <span>•</span>
               <span>Created {formatDate(user.createdAt)}</span>
             </div>
@@ -158,14 +158,14 @@ export default function UserDataTable({
       key: 'toggle-status',
       label: 'Toggle Status',
       icon: <UserCheck className="w-4 h-4" />,
-      onClick: (user: IUser) => onToggleStatus(user._id, !user.isActive),
+      onClick: (user: IUser) => onToggleStatus(String(user._id), !user.isActive),
       variant: 'secondary' as const
     }] : []),
     {
       key: 'delete',
       label: 'Delete User',
       icon: <Trash2 className="w-4 h-4" />,
-      onClick: (user: IUser) => onDelete(user._id),
+      onClick: (user: IUser) => onDelete(String(user._id)),
       variant: 'destructive' as const
     }
   ];
@@ -192,7 +192,7 @@ export default function UserDataTable({
         onPageChange
       }}
       variant={variant}
-      getItemId={(user) => user._id || user.id}
+      getItemId={(user) => String(user._id ?? '')}
     />
   );
 }

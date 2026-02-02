@@ -1,9 +1,9 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface IUserProgress extends Document {
-  user: string; // Reference to User
-  course: string; // Reference to Course
-  lesson: string; // Reference to Lesson
+  user: mongoose.Types.ObjectId; // Reference to User
+  course: mongoose.Types.ObjectId; // Reference to Course
+  lesson: mongoose.Types.ObjectId; // Reference to Lesson
   isCompleted: boolean;
   completedAt?: Date;
   progressPercentage?: number; // 0-100
@@ -13,7 +13,7 @@ export interface IUserProgress extends Document {
   updatedAt: Date;
 }
 
-const UserProgressSchema: Schema = new Schema(
+const UserProgressSchema = new Schema<IUserProgress>(
   {
     user: {
       type: Schema.Types.ObjectId,
@@ -69,11 +69,11 @@ UserProgressSchema.index({ course: 1, isCompleted: 1 });
 UserProgressSchema.index({ user: 1, isCompleted: 1 });
 
 // Pre-save middleware to set completedAt when isCompleted becomes true
-UserProgressSchema.pre('save', function(next) {
-  if (this.isModified('isCompleted') && this.isCompleted && !this.completedAt) {
-    this.completedAt = new Date();
+UserProgressSchema.pre('save', async function() {
+  const doc = this as unknown as IUserProgress;
+  if (doc.isModified('isCompleted') && doc.isCompleted && !doc.completedAt) {
+    doc.completedAt = new Date();
   }
-  next();
 });
 
 const UserProgress = mongoose.models.UserProgress || mongoose.model<IUserProgress>('UserProgress', UserProgressSchema);

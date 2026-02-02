@@ -722,7 +722,7 @@ export async function POST(request: NextRequest) {
     );
 
     // On-demand revalidation: invalidate cache when content is updated
-    revalidateTag('website-content');
+    revalidateTag('website-content', 'max');
     revalidatePath('/api/website-content');
     revalidatePath('/', 'layout');
 
@@ -762,7 +762,7 @@ export async function PUT(request: NextRequest) {
     );
 
     // On-demand revalidation: invalidate cache when content is reset
-    revalidateTag('website-content');
+    revalidateTag('website-content', 'max');
     revalidatePath('/api/website-content');
     revalidatePath('/', 'layout');
 

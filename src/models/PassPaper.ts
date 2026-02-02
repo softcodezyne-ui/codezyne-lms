@@ -1,7 +1,7 @@
 import { Schema, model, models, Document, Types } from 'mongoose';
 
 export interface IPassPaper extends Document {
-  _id: string;
+  _id: Types.ObjectId;
   course: Types.ObjectId;
   sessionName: string;
   year: number;

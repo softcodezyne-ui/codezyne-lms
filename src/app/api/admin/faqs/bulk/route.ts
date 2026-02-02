@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
+import { Types } from 'mongoose';
 import { authOptions } from '@/lib/auth';
 import connectDB from '@/lib/mongodb';
 import CourseFAQ from '@/models/CourseFAQ';
@@ -60,7 +61,8 @@ export async function POST(request: NextRequest) {
       }))
     );
 
-    const populated = await CourseFAQ.find({ _id: { $in: created.map((c: { _id: unknown }) => c._id) } })
+    const ids = created.map((c) => c._id as Types.ObjectId);
+    const populated = await CourseFAQ.find({ _id: { $in: ids } })
       .populate('course', 'title')
       .sort({ order: 1 })
       .lean();

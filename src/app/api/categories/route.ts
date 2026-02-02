@@ -203,7 +203,7 @@ export async function POST(request: NextRequest) {
     await category.save();
 
     // Revalidate categories cache
-    revalidateTag('categories');
+    revalidateTag('categories', 'max');
 
     return NextResponse.json({
       success: true,

@@ -136,34 +136,34 @@ const ExamAttemptSchema = new Schema<IExamAttempt>({
 });
 
 // Virtual for duration
-ExamAttemptSchema.virtual('duration').get(function() {
-  if (this.endTime) {
-    return Math.floor((this.endTime.getTime() - this.startTime.getTime()) / 1000);
+ExamAttemptSchema.virtual('duration').get(function(this: unknown) {
+  const doc = this as IExamAttempt;
+  if (doc.endTime) {
+    return Math.floor((doc.endTime.getTime() - doc.startTime.getTime()) / 1000);
   }
-  return Math.floor((new Date().getTime() - this.startTime.getTime()) / 1000);
+  return Math.floor((new Date().getTime() - doc.startTime.getTime()) / 1000);
 });
 
 // Virtual for time remaining
-ExamAttemptSchema.virtual('timeRemaining').get(function() {
+ExamAttemptSchema.virtual('timeRemaining').get(function(this: unknown) {
   // This would need to be calculated based on exam duration
   // Implementation depends on how you handle time limits
   return 0;
 });
 
 // Pre-save middleware to calculate percentage and isPassed
-ExamAttemptSchema.pre('save', function(next) {
-  if (this.marksObtained !== undefined && this.totalMarks > 0) {
-    this.percentage = Math.round((this.marksObtained / this.totalMarks) * 100);
+ExamAttemptSchema.pre('save', async function() {
+  const doc = this as IExamAttempt;
+  if (doc.marksObtained !== undefined && doc.totalMarks > 0) {
+    doc.percentage = Math.round((doc.marksObtained / doc.totalMarks) * 100);
   }
   
   // Set end time if status is completed
-  if (this.status === 'completed' && !this.endTime) {
-    this.endTime = new Date();
-    this.isSubmitted = true;
-    this.submittedAt = new Date();
+  if (doc.status === 'completed' && !doc.endTime) {
+    doc.endTime = new Date();
+    doc.isSubmitted = true;
+    doc.submittedAt = new Date();
   }
-  
-  next();
 });
 
 // Indexes

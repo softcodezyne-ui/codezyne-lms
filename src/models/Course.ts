@@ -55,9 +55,9 @@ const CourseSchema = new Schema<ICourse>({
     type: Number,
     min: [0, 'Price cannot be negative'],
     validate: {
-      validator: function(this: ICourse, value: number) {
-        // If course is paid, price should be provided
-        if (this.isPaid && (!value || value <= 0)) {
+      validator: function(this: unknown, value: number) {
+        const doc = this as ICourse;
+        if (doc.isPaid && (!value || value <= 0)) {
           return false;
         }
         return true;
@@ -69,9 +69,9 @@ const CourseSchema = new Schema<ICourse>({
     type: Number,
     min: [0, 'Sale price cannot be negative'],
     validate: {
-      validator: function(this: ICourse, value: number) {
-        // Sale price should be less than regular price
-        if (value && this.price && value >= this.price) {
+      validator: function(this: unknown, value: number) {
+        const doc = this as ICourse;
+        if (value && doc.price && value >= doc.price) {
           return false;
         }
         return true;
@@ -89,8 +89,8 @@ const CourseSchema = new Schema<ICourse>({
     ref: 'User',
     required: false,
     validate: {
-      validator: async function(this: ICourse, value: string) {
-        if (!value) return true; // Optional field
+      validator: async function(this: unknown, value: string) {
+        if (!value) return true;
         const User = mongoose.model('User');
         const user = await User.findById(value);
         return user && user.role === 'instructor';
@@ -114,17 +114,19 @@ CourseSchema.index({ instructor: 1 });
 CourseSchema.index({ createdAt: -1 });
 
 // Virtual for final price (sale price if available, otherwise regular price)
-CourseSchema.virtual('finalPrice').get(function() {
-  if (this.isPaid) {
-    return this.salePrice || this.price || 0;
+CourseSchema.virtual('finalPrice').get(function(this: unknown) {
+  const doc = this as ICourse;
+  if (doc.isPaid) {
+    return doc.salePrice || doc.price || 0;
   }
   return 0;
 });
 
 // Virtual for discount percentage
-CourseSchema.virtual('discountPercentage').get(function() {
-  if (this.isPaid && this.salePrice && this.price && this.salePrice < this.price) {
-    return Math.round(((this.price - this.salePrice) / this.price) * 100);
+CourseSchema.virtual('discountPercentage').get(function(this: unknown) {
+  const doc = this as ICourse;
+  if (doc.isPaid && doc.salePrice && doc.price && doc.salePrice < doc.price) {
+    return Math.round(((doc.price - doc.salePrice) / doc.price) * 100);
   }
   return 0;
 });
@@ -180,11 +182,12 @@ CourseSchema.virtual('instructorInfo', {
 });
 
 // Pre-save middleware to validate pricing (sync: throw to reject, no next in Mongoose 7+)
-CourseSchema.pre('save', function() {
-  if (this.isPaid && (!this.price || this.price <= 0)) {
+CourseSchema.pre('save', function(this: unknown) {
+  const doc = this as ICourse;
+  if (doc.isPaid && (!doc.price || doc.price <= 0)) {
     throw new Error('Paid courses must have a valid price');
   }
-  if (this.salePrice && this.price && this.salePrice >= this.price) {
+  if (doc.salePrice && doc.price && doc.salePrice >= doc.price) {
     throw new Error('Sale price must be less than regular price');
   }
 });

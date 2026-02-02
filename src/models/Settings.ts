@@ -1,7 +1,7 @@
 import mongoose, { Document, Schema } from 'mongoose';
 
 export interface ISettings extends Document {
-  _id: string;
+  _id: mongoose.Types.ObjectId;
   category: 'system' | 'security' | 'notifications' | 'database' | 'email' | 'payment' | 'student' | 'website-content';
   settings: any; // Flexible settings object
   updatedAt: Date;

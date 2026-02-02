@@ -160,7 +160,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     }
 
     // Revalidate categories cache
-    revalidateTag('categories');
+    revalidateTag('categories', 'max');
 
     return NextResponse.json({
       success: true,
@@ -241,7 +241,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     await CourseCategory.findByIdAndDelete(id);
 
     // Revalidate categories cache
-    revalidateTag('categories');
+    revalidateTag('categories', 'max');
 
     return NextResponse.json({
       success: true,

@@ -1,8 +1,8 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface ICourseProgress extends Document {
-  user: string; // Reference to User
-  course: string; // Reference to Course
+  user: mongoose.Types.ObjectId; // Reference to User
+  course: mongoose.Types.ObjectId; // Reference to Course
   isCompleted: boolean;
   completedAt?: Date;
   progressPercentage: number; // 0-100
@@ -15,7 +15,7 @@ export interface ICourseProgress extends Document {
   updatedAt: Date;
 }
 
-const CourseProgressSchema: Schema = new Schema(
+const CourseProgressSchema = new Schema<ICourseProgress>(
   {
     user: {
       type: Schema.Types.ObjectId,
@@ -78,17 +78,15 @@ CourseProgressSchema.index({ course: 1, isCompleted: 1 });
 CourseProgressSchema.index({ progressPercentage: 1 });
 
 // Pre-save middleware to set completedAt when isCompleted becomes true
-CourseProgressSchema.pre('save', function(next) {
-  if (this.isModified('isCompleted') && this.isCompleted && !this.completedAt) {
-    this.completedAt = new Date();
+CourseProgressSchema.pre('save', async function() {
+  const doc = this as unknown as ICourseProgress;
+  if (doc.isModified('isCompleted') && doc.isCompleted && !doc.completedAt) {
+    doc.completedAt = new Date();
   }
-  
-  // Update progress percentage based on completed lessons
-  if ((this as any).totalLessons > 0) {
-    (this as any).progressPercentage = Math.round(((this as any).completedLessons / (this as any).totalLessons) * 100);
+
+  if (doc.totalLessons > 0) {
+    doc.progressPercentage = Math.round((doc.completedLessons / doc.totalLessons) * 100);
   }
-  
-  next();
 });
 
 const CourseProgress = mongoose.models.CourseProgress || mongoose.model<ICourseProgress>('CourseProgress', CourseProgressSchema);

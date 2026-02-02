@@ -1,8 +1,8 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface ILessonQuizQuestion extends Document {
-  lesson: string; // Reference to Lesson
-  course: string; // Denormalized for quick queries
+  lesson: mongoose.Types.ObjectId; // Reference to Lesson
+  course: mongoose.Types.ObjectId; // Denormalized for quick queries
   question: string;
   options: string[]; // At least two
   correctOptionIndex: number; // 0-based index into options
@@ -12,7 +12,7 @@ export interface ILessonQuizQuestion extends Document {
   updatedAt: Date;
 }
 
-const LessonQuizQuestionSchema: Schema = new Schema(
+const LessonQuizQuestionSchema = new Schema<ILessonQuizQuestion>(
   {
     lesson: {
       type: Schema.Types.ObjectId,
@@ -68,12 +68,11 @@ const LessonQuizQuestionSchema: Schema = new Schema(
 LessonQuizQuestionSchema.index({ lesson: 1, isActive: 1 });
 LessonQuizQuestionSchema.index({ course: 1, isActive: 1 });
 
-LessonQuizQuestionSchema.pre('save', function (next) {
-  const doc = this as any;
+LessonQuizQuestionSchema.pre('save', async function () {
+  const doc = this as ILessonQuizQuestion;
   if (doc.correctOptionIndex < 0 || doc.correctOptionIndex >= doc.options.length) {
-    return next(new Error('correctOptionIndex must be a valid index within options'));
+    throw new Error('correctOptionIndex must be a valid index within options');
   }
-  next();
 });
 
 const LessonQuizQuestion =

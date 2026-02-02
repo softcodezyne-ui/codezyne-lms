@@ -421,6 +421,7 @@ interface WebsiteContent {
     buttonHref: string;
     buttonGradientFrom: string;
     buttonGradientTo: string;
+    featuredCourseIds?: string[];
   };
   coursesByCategory?: {
     label: {

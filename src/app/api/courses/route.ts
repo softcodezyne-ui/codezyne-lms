@@ -330,7 +330,7 @@ export async function POST(request: NextRequest) {
       console.log('Course saved successfully:', course);
       
       // Revalidate courses cache
-      revalidateTag('courses');
+      revalidateTag('courses', 'max');
     } catch (error) {
       console.error('Error saving course:', error);
       throw error;

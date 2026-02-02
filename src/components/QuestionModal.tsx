@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import FormModal from '@/components/ui/form-modal';
-import { LuPlus as Plus, LuX as X } from 'react-icons/lu';;
+import { LuPlus as Plus, LuX as X } from 'react-icons/lu';
 
 interface QuestionModalProps {
   open: boolean;
@@ -175,7 +175,13 @@ export default function QuestionModal({ open, question, examId, onClose, onSucce
         explanation: question.explanation || '',
         hints: question.hints || [],
         timeLimit: question.timeLimit || 1,
-        exam: typeof question.exam === 'string' ? question.exam : (question.exam?._id?.toString() || '')
+        exam: (() => {
+          const e = question.exam;
+          if (typeof e === 'string') return e;
+          const ex = e as { _id?: { toString(): string }; toString(): string } | undefined;
+          if (!ex) return '';
+          return ex._id ? ex._id.toString() : ex.toString();
+        })()
       });
     } else {
       setFormData({
