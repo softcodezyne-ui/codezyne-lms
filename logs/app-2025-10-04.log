@@ -1,0 +1,55 @@
+{"timestamp":"2025-10-04T11:49:11.737Z","level":"info","message":"Admin logs page accessed","context":"Admin","data":{"timestamp":"2025-10-04T11:49:11.737Z"}}
+{"timestamp":"2025-10-04T11:50:09.588Z","level":"info","message":"Admin logs page accessed","context":"Admin","data":{"timestamp":"2025-10-04T11:50:09.588Z"}}
+{"timestamp":"2025-10-04T11:51:55.444Z","level":"info","message":"🚀 SRJSoft: 🚀 SRJSoft Build Process Started","context":"Build","data":{"timestamp":"2025-10-04T11:51:55.444Z","nodeVersion":"v22.20.0","platform":"linux","arch":"x64"}}
+{"timestamp":"2025-10-04T11:51:55.446Z","level":"info","message":"🚀 SRJSoft: ✅ Build Process Completed Successfully","context":"Build","data":{"timestamp":"2025-10-04T11:51:55.446Z","exitCode":0}}
+{"timestamp":"2025-10-04T11:51:55.892Z","level":"info","message":"This is an info message","context":"TestScript"}
+{"timestamp":"2025-10-04T11:51:55.892Z","level":"warn","message":"This is a warning message","context":"TestScript","data":{"warningCode":"W001"}}
+{"timestamp":"2025-10-04T11:51:55.893Z","level":"error","message":"This is an error message","context":"TestScript","data":{"errorCode":"E001","details":"Something went wrong"}}
+{"timestamp":"2025-10-04T11:51:55.893Z","level":"success","message":"This is a success message","context":"TestScript","data":{"action":"User created successfully"}}
+{"timestamp":"2025-10-04T11:51:55.893Z","level":"debug","message":"This is a debug message","context":"TestScript","data":{"debugInfo":"Variable values","data":{"id":123,"name":"John"}}}
+{"timestamp":"2025-10-04T11:51:55.893Z","level":"info","message":"🚀 SRJSoft: Application started successfully","context":"Startup","data":{"version":"1.0.0","environment":"development"}}
+{"timestamp":"2025-10-04T11:51:55.893Z","level":"info","message":"🚀 SRJSoft: Database connection established","context":"Database","data":{"host":"localhost","port":27017}}
+{"timestamp":"2025-10-04T11:51:55.893Z","level":"info","message":"🚀 SRJSoft: User authentication completed","context":"Auth","data":{"userId":"user123","method":"JWT"}}
+{"timestamp":"2025-10-04T11:51:55.894Z","level":"info","message":"Course created","context":"CourseManagement","data":{"courseId":"course456","title":"React Fundamentals"}}
+{"timestamp":"2025-10-04T11:51:55.894Z","level":"info","message":"Payment processed","context":"Payment","data":{"paymentId":"pay789","amount":99.99,"currency":"USD"}}
+{"timestamp":"2025-10-04T11:51:55.894Z","level":"info","message":"Student enrolled","context":"Enrollment","data":{"studentId":"student123","courseId":"course456"}}
+{"timestamp":"2025-10-04T11:51:58.237Z","level":"info","message":"🚀 SRJSoft: 🚀 SRJSoft Build Process Started","context":"Build","data":{"timestamp":"2025-10-04T11:51:58.237Z","nodeVersion":"v22.20.0","platform":"linux","arch":"x64"}}
+{"timestamp":"2025-10-04T11:51:58.241Z","level":"info","message":"🚀 SRJSoft: ✅ Build Process Completed Successfully","context":"Build","data":{"timestamp":"2025-10-04T11:51:58.241Z","exitCode":0}}
+{"timestamp":"2025-10-04T11:52:22.070Z","level":"info","message":"🚀 SRJSoft: 🚀 SRJSoft Build Process Started","context":"Build","data":{"timestamp":"2025-10-04T11:52:22.070Z","nodeVersion":"v22.20.0","platform":"linux","arch":"x64"}}
+{"timestamp":"2025-10-04T11:52:22.073Z","level":"info","message":"🚀 SRJSoft: ✅ Build Process Completed Successfully","context":"Build","data":{"timestamp":"2025-10-04T11:52:22.073Z","exitCode":0}}
+{"timestamp":"2025-10-04T11:52:37.831Z","level":"info","message":"🚀 SRJSoft: 🚀 SRJSoft Build Process Started","context":"Build","data":{"timestamp":"2025-10-04T11:52:37.831Z","nodeVersion":"v22.20.0","platform":"linux","arch":"x64"}}
+{"timestamp":"2025-10-04T11:52:37.833Z","level":"info","message":"🚀 SRJSoft: ✅ Build Process Completed Successfully","context":"Build","data":{"timestamp":"2025-10-04T11:52:37.833Z","exitCode":0}}
+{"timestamp":"2025-10-04T11:52:54.094Z","level":"info","message":"🚀 SRJSoft: 🚀 SRJSoft Build Process Started","context":"Build","data":{"timestamp":"2025-10-04T11:52:54.094Z","nodeVersion":"v22.20.0","platform":"linux","arch":"x64"}}
+{"timestamp":"2025-10-04T11:52:54.103Z","level":"info","message":"🚀 SRJSoft: ✅ Build Process Completed Successfully","context":"Build","data":{"timestamp":"2025-10-04T11:52:54.103Z","exitCode":0}}
+{"timestamp":"2025-10-04T11:53:28.469Z","level":"info","message":"🚀 SRJSoft: 🚀 SRJSoft Build Process Started","context":"Build","data":{"timestamp":"2025-10-04T11:53:28.469Z","nodeVersion":"v22.20.0","platform":"linux","arch":"x64"}}
+{"timestamp":"2025-10-04T11:53:28.473Z","level":"info","message":"🚀 SRJSoft: ✅ Build Process Completed Successfully","context":"Build","data":{"timestamp":"2025-10-04T11:53:28.473Z","exitCode":0}}
+{"timestamp":"2025-10-04T11:53:59.444Z","level":"info","message":"Admin logs page accessed","context":"Admin","data":{"timestamp":"2025-10-04T11:53:59.444Z"}}
+{"timestamp":"2025-10-04T11:54:00.289Z","level":"info","message":"Admin logs page accessed","context":"Admin","data":{"timestamp":"2025-10-04T11:54:00.289Z"}}
+{"timestamp":"2025-10-04T11:54:34.308Z","level":"info","message":"🚀 SRJSoft: 🚀 SRJSoft Build Process Started","context":"Build","data":{"timestamp":"2025-10-04T11:54:34.308Z","nodeVersion":"v22.20.0","platform":"linux","arch":"x64"}}
+{"timestamp":"2025-10-04T11:54:34.309Z","level":"info","message":"🚀 SRJSoft: ✅ Build Process Completed Successfully","context":"Build","data":{"timestamp":"2025-10-04T11:54:34.309Z","exitCode":0}}
+{"timestamp":"2025-10-04T11:54:50.186Z","level":"info","message":"🚀 SRJSoft: 🚀 SRJSoft Build Process Started","context":"Build","data":{"timestamp":"2025-10-04T11:54:50.186Z","nodeVersion":"v22.20.0","platform":"linux","arch":"x64"}}
+{"timestamp":"2025-10-04T11:54:50.188Z","level":"info","message":"🚀 SRJSoft: ✅ Build Process Completed Successfully","context":"Build","data":{"timestamp":"2025-10-04T11:54:50.188Z","exitCode":0}}
+{"timestamp":"2025-10-04T11:54:56.809Z","level":"info","message":"🚀 Codezyne: 🚀 Codezyne Build Process Started","context":"Build","data":{"timestamp":"2025-10-04T11:54:56.809Z","nodeVersion":"v22.20.0","platform":"linux","arch":"x64"}}
+{"timestamp":"2025-10-04T11:54:56.811Z","level":"error","message":"💥 Uncaught Exception in Build Process","context":"Build","data":{"timestamp":"2025-10-04T11:54:56.811Z","error":"logger.srjsoft is not a function","stack":"TypeError: logger.srjsoft is not a function\n    at process.<anonymous> (/home/shahadat/Desktop/petmota-lms/scripts/log-build.js:16:12)\n    at process.emit (node:events:519:28)"}}
+{"timestamp":"2025-10-04T11:54:58.575Z","level":"info","message":"🚀 Codezyne: 🚀 Codezyne Build Process Started","context":"Build","data":{"timestamp":"2025-10-04T11:54:58.575Z","nodeVersion":"v22.20.0","platform":"linux","arch":"x64"}}
+{"timestamp":"2025-10-04T11:54:58.577Z","level":"error","message":"💥 Uncaught Exception in Build Process","context":"Build","data":{"timestamp":"2025-10-04T11:54:58.577Z","error":"logger.srjsoft is not a function","stack":"TypeError: logger.srjsoft is not a function\n    at process.<anonymous> (/home/shahadat/Desktop/petmota-lms/scripts/log-build.js:16:12)\n    at process.emit (node:events:519:28)"}}
+{"timestamp":"2025-10-04T11:55:16.346Z","level":"info","message":"🚀 Codezyne: 🚀 Codezyne Build Process Started","context":"Build","data":{"timestamp":"2025-10-04T11:55:16.346Z","nodeVersion":"v22.20.0","platform":"linux","arch":"x64"}}
+{"timestamp":"2025-10-04T11:55:16.349Z","level":"info","message":"🚀 Codezyne: ✅ Build Process Completed Successfully","context":"Build","data":{"timestamp":"2025-10-04T11:55:16.349Z","exitCode":0}}
+{"timestamp":"2025-10-04T11:55:25.609Z","level":"info","message":"This is an info message","context":"TestScript"}
+{"timestamp":"2025-10-04T11:55:25.609Z","level":"warn","message":"This is a warning message","context":"TestScript","data":{"warningCode":"W001"}}
+{"timestamp":"2025-10-04T11:55:25.610Z","level":"error","message":"This is an error message","context":"TestScript","data":{"errorCode":"E001","details":"Something went wrong"}}
+{"timestamp":"2025-10-04T11:55:25.610Z","level":"success","message":"This is a success message","context":"TestScript","data":{"action":"User created successfully"}}
+{"timestamp":"2025-10-04T11:55:25.610Z","level":"debug","message":"This is a debug message","context":"TestScript","data":{"debugInfo":"Variable values","data":{"id":123,"name":"John"}}}
+{"timestamp":"2025-10-04T11:55:25.610Z","level":"info","message":"🚀 Codezyne: Application started successfully","context":"Startup","data":{"version":"1.0.0","environment":"development"}}
+{"timestamp":"2025-10-04T11:55:25.610Z","level":"info","message":"🚀 Codezyne: Database connection established","context":"Database","data":{"host":"localhost","port":27017}}
+{"timestamp":"2025-10-04T11:55:25.610Z","level":"info","message":"🚀 Codezyne: User authentication completed","context":"Auth","data":{"userId":"user123","method":"JWT"}}
+{"timestamp":"2025-10-04T11:55:25.611Z","level":"info","message":"Course created","context":"CourseManagement","data":{"courseId":"course456","title":"React Fundamentals"}}
+{"timestamp":"2025-10-04T11:55:25.611Z","level":"info","message":"Payment processed","context":"Payment","data":{"paymentId":"pay789","amount":99.99,"currency":"USD"}}
+{"timestamp":"2025-10-04T11:55:25.611Z","level":"info","message":"Student enrolled","context":"Enrollment","data":{"studentId":"student123","courseId":"course456"}}
+{"timestamp":"2025-10-04T11:55:28.415Z","level":"info","message":"🚀 Codezyne: 🚀 Codezyne Build Process Started","context":"Build","data":{"timestamp":"2025-10-04T11:55:28.415Z","nodeVersion":"v22.20.0","platform":"linux","arch":"x64"}}
+{"timestamp":"2025-10-04T11:55:28.417Z","level":"info","message":"🚀 Codezyne: ✅ Build Process Completed Successfully","context":"Build","data":{"timestamp":"2025-10-04T11:55:28.417Z","exitCode":0}}
+{"timestamp":"2025-10-04T11:55:46.095Z","level":"info","message":"🚀 Codezyne: 🚀 Codezyne Build Process Started","context":"Build","data":{"timestamp":"2025-10-04T11:55:46.095Z","nodeVersion":"v22.20.0","platform":"linux","arch":"x64"}}
+{"timestamp":"2025-10-04T11:55:46.101Z","level":"info","message":"🚀 Codezyne: ✅ Build Process Completed Successfully","context":"Build","data":{"timestamp":"2025-10-04T11:55:46.100Z","exitCode":0}}
+{"timestamp":"2025-10-04T11:56:14.175Z","level":"info","message":"Admin logs page accessed","context":"Admin","data":{"timestamp":"2025-10-04T11:56:14.175Z"}}
+{"timestamp":"2025-10-04T11:57:11.225Z","level":"info","message":"Admin logs page accessed","context":"Admin","data":{"timestamp":"2025-10-04T11:57:11.225Z"}}
+{"timestamp":"2025-10-04T11:57:49.997Z","level":"info","message":"Admin logs page accessed","context":"Admin","data":{"timestamp":"2025-10-04T11:57:49.996Z"}}

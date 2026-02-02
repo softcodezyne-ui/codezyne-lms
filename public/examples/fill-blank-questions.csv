@@ -1,0 +1,6 @@
+question,type,marks,difficulty,category,options,correct,correctanswer,explanation,hints,tags,timelimit
+"The chemical symbol for oxygen is ___",fill_blank,1,easy,Chemistry,"","O2","O2 is the molecular formula for oxygen gas","","chemistry,elements,oxygen,symbols",3
+"The capital of Australia is ___",fill_blank,1,easy,Geography,"","Canberra","Canberra is the capital city of Australia","","geography,australia,capitals,countries",4
+"The largest planet in our solar system is ___",fill_blank,1,easy,Astronomy,"","Jupiter","Jupiter is the largest planet in our solar system","","astronomy,planets,jupiter,solar-system",3
+"The process by which plants make their own food is called ___",fill_blank,2,medium,Biology,"","photosynthesis","Photosynthesis is how plants convert sunlight into energy","","biology,photosynthesis,plants,energy",5
+"The programming language used for web styling is ___",fill_blank,1,medium,Computer Science,"","CSS","CSS (Cascading Style Sheets) is used for styling web pages","","programming,css,web-development,styling",4

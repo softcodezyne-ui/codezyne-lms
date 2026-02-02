@@ -1,0 +1,6 @@
+question,type,marks,difficulty,category,options,correct,correctanswer,explanation,hints,tags,timelimit
+"What is the capital of France?",mcq,2,easy,Geography,"Paris|London|Berlin|Madrid","0","","Paris is the capital and largest city of France","","geography,capitals,europe",5
+"Which planet is closest to the Sun?",mcq,1,easy,Astronomy,"Mercury|Venus|Earth|Mars","0","","Mercury is the smallest planet and closest to the Sun","","astronomy,planets,solar-system",3
+"What is the chemical symbol for gold?",mcq,1,medium,Chemistry,"Au|Ag|Go|Gd","0","","Au comes from the Latin word 'aurum' meaning gold","","chemistry,elements,symbols",4
+"Which programming language is known for web development?",mcq,2,medium,Computer Science,"JavaScript|Java|Python|C++","0","","JavaScript is primarily used for web development","","programming,web-development,frontend",6
+"What is the largest mammal in the world?",mcq,1,easy,Biology,"Blue whale|African elephant|Giraffe|Polar bear","0","","The blue whale is the largest animal ever known to have lived","","biology,animals,mammals",4

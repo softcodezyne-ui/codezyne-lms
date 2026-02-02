@@ -1,0 +1,6 @@
+question,type,marks,difficulty,category,options,correct,correctanswer,explanation,hints,tags,timelimit
+"What is the capital of France?",mcq,2,easy,Geography,"Paris|London|Berlin|Madrid","0","","Paris is the capital and largest city of France","","geography,capitals,europe",5
+"Explain the process of photosynthesis in plants",written,10,medium,Biology,"","","Plants use sunlight, water, and carbon dioxide to produce glucose and oxygen through chlorophyll in their leaves","Consider the role of sunlight and chlorophyll","biology,photosynthesis,plants,energy",15
+"Water boils at 100°C at sea level",true_false,1,easy,Science,"True|False","0","","Water boils at 100°C (212°F) at standard atmospheric pressure","","science,physics,water,boiling-point",3
+"The chemical symbol for oxygen is ___",fill_blank,1,easy,Chemistry,"","O2","O2 is the molecular formula for oxygen gas","","chemistry,elements,oxygen,symbols",3
+"Discuss the impact of social media on modern society",essay,25,hard,Sociology,"","","Social media has transformed communication, created new forms of social interaction, influenced politics and business, but also raised concerns about privacy, mental health, and misinformation","Consider both positive and negative impacts","sociology,social-media,technology,communication",45

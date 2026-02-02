@@ -1,0 +1,6 @@
+question,type,marks,difficulty,category,options,correct,correctanswer,explanation,hints,tags,timelimit
+"Water boils at 100°C at sea level",true_false,1,easy,Science,"True|False","0","","Water boils at 100°C (212°F) at standard atmospheric pressure","","science,physics,water,boiling-point",3
+"The Great Wall of China is visible from space with the naked eye",true_false,1,medium,Geography,"True|False","1","","The Great Wall is not visible from space with the naked eye, despite the common myth","","geography,china,space,myths",4
+"Sharks are mammals",true_false,1,easy,Biology,"True|False","1","","Sharks are fish, not mammals. They breathe through gills and are cold-blooded","","biology,animals,sharks,classification",3
+"The human brain uses 10% of its capacity",true_false,1,medium,Psychology,"True|False","1","","This is a myth. The human brain uses nearly 100% of its capacity throughout the day","","psychology,brain,myths,neuroscience",4
+"Light travels faster than sound",true_false,1,easy,Physics,"True|False","0","","Light travels at approximately 300,000 km/s while sound travels at about 343 m/s in air","","physics,light,sound,speed",3

@@ -1,0 +1,429 @@
+$ bun run next dev --turbopack
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.221:3000
+- Environments: .env.local
+- Experiments (use with caution):
+  · optimizePackageImports
+
+✓ Starting...
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+✓ Ready in 2.6s
+pathname.startsWith('/student') false
+ GET /admin/students 200 in 760ms (compile: 374ms, proxy.ts: 88ms, render: 298ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:33473) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:33645) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/auth/session 200 in 1685ms (compile: 1627ms, render: 57ms)
+ GET /api/auth/session 200 in 76ms (compile: 60ms, render: 16ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:33659) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/teachers 200 in 2.4s (compile: 253ms, render: 2.1s)
+ GET /api/students?page=1&limit=10 200 in 2.5s (compile: 133ms, render: 2.3s)
+ GET /api/teachers 200 in 222ms (compile: 3ms, render: 219ms)
+ GET /api/exams?limit=100 200 in 2.7s (compile: 310ms, render: 2.4s)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/students 200 in 2.8s (compile: 323ms, render: 2.5s)
+ GET /api/categories? 200 in 2.8s (compile: 214ms, render: 2.6s)
+ GET /api/students?page=1&limit=10 200 in 463ms (compile: 3ms, render: 460ms)
+ GET /api/exams?limit=100 200 in 465ms (compile: 3ms, render: 462ms)
+ GET /api/categories? 200 in 517ms (compile: 3ms, render: 514ms)
+ GET /api/assignments 200 in 3.5s (compile: 355ms, render: 3.1s)
+ GET /api/students 200 in 819ms (compile: 3ms, render: 817ms)
+ GET /api/assignments 200 in 443ms (compile: 4ms, render: 439ms)
+✓ Compiled in 733ms
+ GET /api/auth/session 200 in 78ms (compile: 60ms, render: 18ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:34912) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/auth/session 200 in 150ms (compile: 127ms, render: 22ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:35107) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/auth/session 200 in 174ms (compile: 138ms, render: 36ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:36080) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+pathname.startsWith('/student') false
+ GET /admin/teachers 200 in 244ms (compile: 97ms, proxy.ts: 45ms, render: 103ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/teachers 200 in 124ms (compile: 13ms, render: 111ms)
+ GET /api/teachers 200 in 103ms (compile: 7ms, render: 96ms)
+ GET /api/students 200 in 285ms (compile: 10ms, render: 274ms)
+ GET /api/exams?limit=100 200 in 391ms (compile: 15ms, render: 376ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/assignments 200 in 474ms (compile: 18ms, render: 455ms)
+ GET /api/students 200 in 278ms (compile: 4ms, render: 273ms)
+ GET /api/teachers?page=1&limit=10 200 in 643ms (compile: 24ms, render: 618ms)
+ GET /api/exams?limit=100 200 in 370ms (compile: 1906µs, render: 368ms)
+ GET /api/teachers?page=1&limit=10 200 in 130ms (compile: 6ms, render: 124ms)
+ GET /api/assignments 200 in 444ms (compile: 1689µs, render: 442ms)
+ GET /api/categories? 200 in 994ms (compile: 6ms, render: 988ms)
+ GET /api/categories? 200 in 432ms (compile: 1666µs, render: 430ms)
+pathname.startsWith('/student') false
+ GET /admin/enrollments 200 in 258ms (compile: 147ms, proxy.ts: 22ms, render: 89ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/teachers 200 in 108ms (compile: 11ms, render: 97ms)
+ GET /api/teachers 200 in 95ms (compile: 2ms, render: 92ms)
+ GET /api/students 200 in 288ms (compile: 9ms, render: 279ms)
+ GET /api/exams?limit=100 200 in 394ms (compile: 12ms, render: 383ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/assignments 200 in 442ms (compile: 2ms, render: 440ms)
+ GET /api/enrollments?page=1&limit=10 200 in 497ms (compile: 40ms, render: 456ms)
+ GET /api/students 200 in 289ms (compile: 5ms, render: 284ms)
+ GET /api/exams?limit=100 200 in 382ms (compile: 6ms, render: 375ms)
+ GET /api/assignments 200 in 437ms (compile: 5ms, render: 432ms)
+ GET /api/categories? 200 in 974ms (compile: 7ms, render: 967ms)
+ GET /api/enrollments?page=1&limit=10 200 in 430ms (compile: 3ms, render: 427ms)
+ GET /api/categories? 200 in 468ms (compile: 6ms, render: 462ms)
+pathname.startsWith('/student') false
+ GET /admin/reviews 200 in 211ms (compile: 118ms, proxy.ts: 17ms, render: 76ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+(node:33473) [MONGOOSE] Warning: Duplicate schema index on {"student":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+ GET /api/teachers 200 in 115ms (compile: 10ms, render: 105ms)
+ GET /api/students 200 in 324ms (compile: 7ms, render: 317ms)
+ GET /api/admin/course-reviews?page=1&limit=20&sortBy=createdAt&sortOrder=desc 200 in 292ms (compile: 61ms, render: 231ms)
+ GET /api/exams?limit=100 200 in 491ms (compile: 8ms, render: 483ms)
+ GET /api/categories? 200 in 539ms (compile: 5ms, render: 534ms)
+ GET /api/assignments 200 in 575ms (compile: 11ms, render: 564ms)
+ GET /api/users?role=student&limit=100 200 in 298ms (compile: 116ms, render: 183ms)
+ GET /api/admin/course-reviews 200 in 315ms (compile: 6ms, render: 309ms)
+ GET /api/teachers 200 in 205ms (compile: 14ms, render: 192ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/admin/course-reviews?page=1&limit=20&sortBy=createdAt&sortOrder=desc 200 in 293ms (compile: 25ms, render: 268ms)
+ GET /api/students 200 in 400ms (compile: 28ms, render: 372ms)
+ GET /api/users?role=student&limit=100 200 in 92ms (compile: 1538µs, render: 91ms)
+ GET /api/exams?limit=100 200 in 431ms (compile: 7ms, render: 424ms)
+ GET /api/admin/course-reviews 200 in 175ms (compile: 1633µs, render: 173ms)
+ GET /api/categories? 200 in 465ms (compile: 21ms, render: 445ms)
+ GET /api/assignments 200 in 434ms (compile: 4ms, render: 430ms)
+ GET /api/courses?limit=100 200 in 1342ms (compile: 87ms, render: 1254ms)
+ GET /api/courses?limit=100 200 in 579ms (compile: 6ms, render: 573ms)
+ GET /api/auth/session 200 in 210ms (compile: 180ms, render: 30ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:37569) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/auth/csrf 200 in 149ms (compile: 133ms, render: 16ms)
+ POST /api/auth/signout 200 in 34ms (compile: 6ms, render: 28ms)
+ GET /api/auth/session 200 in 23ms (compile: 6ms, render: 17ms)
+pathname.startsWith('/student') false
+ GET /api/auth/session 200 in 29ms (compile: 11ms, render: 17ms)
+ GET /api/auth/session 200 in 35ms (compile: 13ms, render: 21ms)
+ GET /api/auth/session 200 in 15ms (compile: 6ms, render: 9ms)
+ GET /login 200 in 288ms (compile: 163ms, proxy.ts: 18ms, render: 107ms)
+ GET /api/auth/session 200 in 9ms (compile: 2ms, render: 7ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:37580) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/auth/providers 200 in 158ms (compile: 132ms, render: 26ms)
+ GET /api/auth/csrf 200 in 20ms (compile: 6ms, render: 13ms)
+Authorize called with phone: 01700000001
+Connecting to database...
+Looking for user with phone: 01700000001
+User found, checking password...
+Password valid, updating last login...
+Returning user data: {
+  id: '694d224b65eab39f5c081748',
+  email: '01700000001@teacher.local',
+  phone: '01700000001',
+  name: 'John Doe',
+  role: 'instructor',
+  image: ''
+}
+ POST /api/auth/callback/credentials 200 in 595ms (compile: 7ms, render: 588ms)
+ GET /api/auth/session 200 in 20ms (compile: 5ms, render: 15ms)
+ GET /api/auth/session 200 in 28ms (compile: 7ms, render: 22ms)
+token {
+  name: 'John Doe',
+  email: '01700000001@teacher.local',
+  picture: '',
+  sub: '694d224b65eab39f5c081748',
+  role: 'instructor',
+  iat: 1767511555,
+  exp: 1770103555,
+  jti: 'd57bef04-2856-4075-bd49-c402896ccc9c'
+}
+pathname.startsWith('/student') false
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:37636) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+TeacherSidebar - User data: {
+  user: null,
+  userRole: undefined,
+  isLoading: false,
+  session: undefined,
+  sessionStatus: 'loading',
+  sessionUser: undefined
+}
+ GET /instructor/dashboard 200 in 3.3s (compile: 2.9s, proxy.ts: 23ms, render: 373ms)
+ GET /api/auth/session 200 in 86ms (compile: 70ms, render: 15ms)
+ GET /api/instructor/dashboard 200 in 814ms (compile: 413ms, render: 400ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:37661) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+token {
+  name: 'John Doe',
+  email: '01700000001@teacher.local',
+  picture: '',
+  sub: '694d224b65eab39f5c081748',
+  role: 'instructor',
+  iat: 1767511559,
+  exp: 1770103559,
+  jti: 'b86a3212-6fc0-44e2-b55f-328b55d3b07c'
+}
+pathname.startsWith('/student') false
+ GET /instructor/students 200 in 1726ms (compile: 1677ms, proxy.ts: 19ms, render: 30ms)
+ GET /api/instructor/students?page=1&limit=10 200 in 305ms (compile: 212ms, render: 93ms)
+ GET /api/instructor/students?page=1&limit=10 200 in 95ms (compile: 1734µs, render: 93ms)
+token {
+  name: 'John Doe',
+  email: '01700000001@teacher.local',
+  picture: '',
+  sub: '694d224b65eab39f5c081748',
+  role: 'instructor',
+  iat: 1767511559,
+  exp: 1770103559,
+  jti: 'b86a3212-6fc0-44e2-b55f-328b55d3b07c'
+}
+pathname.startsWith('/student') false
+ GET /instructor/assignments 200 in 1566ms (compile: 1530ms, proxy.ts: 17ms, render: 19ms)
+ GET /api/instructor/courses 200 in 347ms (compile: 241ms, render: 106ms)
+ GET /api/instructor/courses 200 in 99ms (compile: 4ms, render: 95ms)
+ GET /api/instructor/assignments?page=1&limit=10&sortBy=createdAt&sortOrder=desc 200 in 1049ms (compile: 210ms, render: 839ms)
+ GET /api/instructor/assignments?page=1&limit=10&sortBy=createdAt&sortOrder=desc 200 in 806ms (compile: 6ms, render: 800ms)
+token {
+  name: 'John Doe',
+  email: '01700000001@teacher.local',
+  picture: '',
+  sub: '694d224b65eab39f5c081748',
+  role: 'instructor',
+  iat: 1767511559,
+  exp: 1770103559,
+  jti: 'b86a3212-6fc0-44e2-b55f-328b55d3b07c'
+}
+pathname.startsWith('/student') false
+ GET /instructor/courses 200 in 428ms (compile: 389ms, proxy.ts: 5ms, render: 34ms)
+ GET /api/auth/session 200 in 168ms (compile: 114ms, render: 55ms)
+ GET /api/auth/session 200 in 12ms (compile: 3ms, render: 10ms)
+ GET /api/teachers 401 in 22ms (compile: 4ms, render: 18ms)
+ GET /api/users?role=instructor,teacher,admin 401 in 28ms (compile: 13ms, render: 16ms)
+ GET /api/teachers 401 in 13ms (compile: 2ms, render: 11ms)
+ GET /api/users?role=instructor,teacher,admin 401 in 13ms (compile: 3ms, render: 10ms)
+ GET /api/courses?page=1&limit=10&status=published&sortBy=createdAt&sortOrder=desc 200 in 358ms (compile: 7ms, render: 351ms)
+ GET /api/categories 200 in 435ms (compile: 10ms, render: 425ms)
+ GET /api/courses?page=1&limit=10&status=published&sortBy=createdAt&sortOrder=desc 200 in 346ms (compile: 3ms, render: 342ms)
+ GET /api/categories 200 in 429ms (compile: 4ms, render: 425ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:37694) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+token {
+  name: 'John Doe',
+  email: '01700000001@teacher.local',
+  picture: '',
+  sub: '694d224b65eab39f5c081748',
+  role: 'instructor',
+  iat: 1767511583,
+  exp: 1770103583,
+  jti: '4abb1c9c-7b33-4485-9fe0-6a15fc975eb8'
+}
+pathname.startsWith('/student') false
+ GET /instructor/reviews 200 in 1619ms (compile: 1506ms, proxy.ts: 21ms, render: 92ms)
+ GET /api/admin/course-reviews?page=1&limit=20&sortBy=createdAt&sortOrder=desc 403 in 19ms (compile: 5ms, render: 14ms)
+ GET /api/users?role=student&limit=100 401 in 23ms (compile: 9ms, render: 14ms)
+ GET /api/admin/course-reviews?page=1&limit=20&sortBy=createdAt&sortOrder=desc 403 in 16ms (compile: 2ms, render: 14ms)
+ GET /api/users?role=student&limit=100 401 in 13ms (compile: 4ms, render: 9ms)
+ GET /api/instructor/courses?limit=100 200 in 102ms (compile: 7ms, render: 95ms)
+ GET /api/admin/course-reviews?page=1&limit=20&sortBy=createdAt&sortOrder=desc 403 in 12ms (compile: 1618µs, render: 10ms)
+ GET /api/admin/course-reviews 403 in 13ms (compile: 5ms, render: 8ms)
+ GET /api/instructor/courses?limit=100 200 in 88ms (compile: 3ms, render: 86ms)
+ GET /api/admin/course-reviews?page=1&limit=20&sortBy=createdAt&sortOrder=desc 403 in 20ms (compile: 1731µs, render: 18ms)
+ GET /api/admin/course-reviews 403 in 22ms (compile: 4ms, render: 19ms)
+ GET /api/auth/csrf 200 in 209ms (compile: 187ms, render: 22ms)
+ POST /api/auth/signout 200 in 74ms (compile: 18ms, render: 56ms)
+ GET /api/auth/session 200 in 11ms (compile: 3ms, render: 8ms)
+pathname.startsWith('/student') false
+ GET /api/auth/session 200 in 40ms (compile: 31ms, render: 9ms)
+ GET /login 200 in 56ms (compile: 8ms, proxy.ts: 9ms, render: 39ms)
+ GET /api/auth/session 200 in 12ms (compile: 3ms, render: 8ms)
+ GET /api/auth/session 200 in 9ms (compile: 3ms, render: 7ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:37708) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/auth/providers 200 in 218ms (compile: 194ms, render: 24ms)
+ GET /api/auth/csrf 200 in 27ms (compile: 7ms, render: 20ms)
+Authorize called with phone: 01700000000
+Connecting to database...
+Looking for user with phone: 01700000000
+User found, checking password...
+Password valid, updating last login...
+Returning user data: {
+  id: '694d22d8f56613658f4f7c2b',
+  email: '01700000000@admin.local',
+  phone: '01700000000',
+  name: 'Admin User',
+  role: 'admin',
+  image: ''
+}
+ POST /api/auth/callback/credentials 200 in 534ms (compile: 7ms, render: 527ms)
+ GET /api/auth/session 200 in 9ms (compile: 1823µs, render: 7ms)
+ GET /api/auth/session 200 in 8ms (compile: 1715µs, render: 7ms)
+pathname.startsWith('/student') false
+ GET /admin/dashboard 200 in 162ms (compile: 46ms, proxy.ts: 6ms, render: 110ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:37719) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/auth/session 200 in 87ms (compile: 78ms, render: 9ms)
+ GET /api/auth/session 200 in 10ms (compile: 1821µs, render: 9ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/teachers 200 in 164ms (compile: 21ms, render: 143ms)
+ GET /api/teachers 200 in 152ms (compile: 1926µs, render: 151ms)
+ GET /api/students 200 in 353ms (compile: 13ms, render: 340ms)
+ GET /api/exams?limit=100 200 in 471ms (compile: 24ms, render: 447ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/categories? 200 in 546ms (compile: 10ms, render: 536ms)
+ GET /api/assignments 200 in 562ms (compile: 27ms, render: 535ms)
+ GET /api/students 200 in 307ms (compile: 7ms, render: 300ms)
+ GET /api/exams?limit=100 200 in 387ms (compile: 13ms, render: 374ms)
+ GET /api/categories? 200 in 446ms (compile: 4ms, render: 442ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:37731) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/assignments 200 in 472ms (compile: 7ms, render: 465ms)
+ GET /api/admin/dashboard 200 in 1205ms (compile: 55ms, render: 1150ms)
+ GET /api/admin/dashboard 200 in 665ms (compile: 6ms, render: 659ms)
+ GET /api/admin/dashboard 200 in 622ms (compile: 7ms, render: 615ms)
+ GET /api/auth/session 200 in 216ms (compile: 204ms, render: 12ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:39382) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+pathname.startsWith('/student') false
+ GET /admin/courses 200 in 235ms (compile: 137ms, proxy.ts: 18ms, render: 80ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/teachers 200 in 116ms (compile: 13ms, render: 102ms)
+ GET /api/students 200 in 329ms (compile: 13ms, render: 317ms)
+ GET /api/exams?limit=100 200 in 421ms (compile: 16ms, render: 405ms)
+ GET /api/users?role=instructor,teacher,admin 200 in 106ms (compile: 6ms, render: 100ms)
+ GET /api/categories? 200 in 503ms (compile: 10ms, render: 493ms)
+ GET /api/assignments 200 in 487ms (compile: 6ms, render: 480ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/teachers 200 in 114ms (compile: 6ms, render: 108ms)
+ GET /api/categories 200 in 473ms (compile: 4ms, render: 468ms)
+ GET /api/courses?page=1&limit=10&status=published&sortBy=createdAt&sortOrder=desc 200 in 562ms (compile: 7ms, render: 555ms)
+ GET /api/users?role=instructor,teacher,admin 200 in 104ms (compile: 4ms, render: 101ms)
+ GET /api/teachers 200 in 93ms (compile: 1528µs, render: 92ms)
+ GET /api/students 200 in 261ms (compile: 3ms, render: 258ms)
+ GET /api/teachers 200 in 94ms (compile: 1939µs, render: 92ms)
+ GET /api/exams?limit=100 200 in 355ms (compile: 4ms, render: 351ms)
+ GET /api/categories? 200 in 421ms (compile: 2ms, render: 419ms)
+ GET /api/assignments 200 in 419ms (compile: 1477µs, render: 418ms)
+ GET /api/categories 200 in 440ms (compile: 1674µs, render: 439ms)
+ GET /api/courses?page=1&limit=10&status=published&sortBy=createdAt&sortOrder=desc 200 in 535ms (compile: 2ms, render: 533ms)
+pathname.startsWith('/student') false
+ GET /admin/courses/builder?id=6953ba2ba122ae3998d48040 200 in 379ms (compile: 279ms, proxy.ts: 18ms, render: 82ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/teachers 200 in 125ms (compile: 7ms, render: 119ms)
+ GET /api/students 200 in 337ms (compile: 13ms, render: 324ms)
+ GET /api/exams?limit=100 200 in 630ms (compile: 9ms, render: 622ms)
+ GET /api/categories? 200 in 669ms (compile: 7ms, render: 662ms)
+ GET /api/chapters? 200 in 684ms (compile: 36ms, render: 648ms)
+ GET /api/assignments 200 in 695ms (compile: 3ms, render: 692ms)
+ GET /api/admin/course-reviews?course=6953ba2ba122ae3998d48040&limit=100 200 in 103ms (compile: 5ms, render: 98ms)
+ GET /api/admin/course-reviews?course=6953ba2ba122ae3998d48040&limit=100 200 in 92ms (compile: 2ms, render: 89ms)
+ GET /api/teachers 200 in 93ms (compile: 4ms, render: 89ms)
+ GET /api/lessons? 200 in 691ms (compile: 165ms, render: 526ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/students 200 in 250ms (compile: 1523µs, render: 248ms)
+ GET /api/chapters?course=6953ba2ba122ae3998d48040 200 in 456ms (compile: 11ms, render: 445ms)
+ GET /api/exams?limit=100 200 in 369ms (compile: 4ms, render: 365ms)
+ GET /api/teachers 200 in 134ms (compile: 6ms, render: 128ms)
+ GET /api/categories? 200 in 446ms (compile: 5ms, render: 441ms)
+ GET /api/chapters? 200 in 449ms (compile: 11ms, render: 438ms)
+ GET /api/teachers 200 in 177ms (compile: 18ms, render: 159ms)
+ GET /api/assignments 200 in 468ms (compile: 6ms, render: 462ms)
+ GET /api/lessons? 200 in 392ms (compile: 7ms, render: 385ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+ GET /api/chapters?course=6953ba2ba122ae3998d48040 200 in 480ms (compile: 15ms, render: 465ms)
+(node:39435) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/categories? 200 in 440ms (compile: 17ms, render: 423ms)
+ GET /api/courses/6953ba2ba122ae3998d48040 200 in 1595ms (compile: 1422ms, render: 173ms)
+ GET /api/teachers 200 in 132ms (compile: 12ms, render: 120ms)
+ GET /api/courses/6953ba2ba122ae3998d48040 200 in 418ms (compile: 200ms, render: 218ms)
+ GET /api/teachers 200 in 97ms (compile: 3ms, render: 94ms)
+ GET /api/categories? 200 in 623ms (compile: 1629µs, render: 621ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:39448) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/lessons?chapter=6953ba4fa122ae3998d48081 200 in 357ms (compile: 6ms, render: 352ms)
+ PUT /api/lessons/reorder 200 in 613ms (compile: 462ms, render: 150ms)
+ PUT /api/lessons/reorder 200 in 101ms (compile: 2ms, render: 99ms)
+ PUT /api/lessons/reorder 200 in 122ms (compile: 8ms, render: 114ms)
+ PUT /api/lessons/reorder 200 in 123ms (compile: 6ms, render: 117ms)
+pathname.startsWith('/student') false
+ GET /admin/courses 200 in 94ms (compile: 11ms, proxy.ts: 16ms, render: 67ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/teachers 200 in 135ms (compile: 15ms, render: 120ms)
+ GET /api/students 200 in 310ms (compile: 11ms, render: 299ms)
+ GET /api/exams?limit=100 200 in 399ms (compile: 30ms, render: 370ms)
+ GET /api/categories? 200 in 480ms (compile: 5ms, render: 475ms)
+ GET /api/users?role=instructor,teacher,admin 200 in 142ms (compile: 10ms, render: 132ms)
+ GET /api/assignments 200 in 451ms (compile: 17ms, render: 434ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/teachers 200 in 93ms (compile: 2ms, render: 91ms)
+ GET /api/users?role=instructor,teacher,admin 200 in 91ms (compile: 1919µs, render: 89ms)
+ GET /api/courses?page=1&limit=10&status=published&sortBy=createdAt&sortOrder=desc 200 in 563ms (compile: 13ms, render: 550ms)
+ GET /api/categories 200 in 478ms (compile: 2ms, render: 476ms)
+ GET /api/teachers 200 in 99ms (compile: 1632µs, render: 98ms)
+ GET /api/students 200 in 261ms (compile: 1308µs, render: 260ms)
+ GET /api/exams?limit=100 200 in 340ms (compile: 1442µs, render: 339ms)
+ GET /api/teachers 200 in 141ms (compile: 8ms, render: 133ms)
+ GET /api/categories? 200 in 461ms (compile: 1250µs, render: 460ms)
+ GET /api/assignments 200 in 466ms (compile: 2ms, render: 464ms)
+ GET /api/courses?page=1&limit=10&status=published&sortBy=createdAt&sortOrder=desc 200 in 561ms (compile: 3ms, render: 558ms)
+ GET /api/categories 200 in 512ms (compile: 16ms, render: 496ms)
+pathname.startsWith('/student') false
+ GET /admin/courses/builder?id=6953ba2ba122ae3998d48040 200 in 85ms (compile: 9ms, proxy.ts: 15ms, render: 61ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/teachers 200 in 135ms (compile: 11ms, render: 125ms)
+ GET /api/students 200 in 288ms (compile: 8ms, render: 280ms)
+ GET /api/exams?limit=100 200 in 439ms (compile: 14ms, render: 425ms)
+ GET /api/categories? 200 in 525ms (compile: 3ms, render: 522ms)
+ GET /api/assignments 200 in 517ms (compile: 16ms, render: 500ms)
+ GET /api/chapters? 200 in 520ms (compile: 18ms, render: 502ms)
+ GET /api/lessons? 200 in 418ms (compile: 5ms, render: 413ms)
+ GET /api/courses/6953ba2ba122ae3998d48040 200 in 280ms (compile: 105ms, render: 175ms)
+Exams API - Session check: { hasSession: true, hasUser: true, userId: '694d22d8f56613658f4f7c2b' }
+ GET /api/admin/course-reviews?course=6953ba2ba122ae3998d48040&limit=100 200 in 101ms (compile: 3ms, render: 98ms)
+ GET /api/admin/course-reviews?course=6953ba2ba122ae3998d48040&limit=100 200 in 103ms (compile: 6ms, render: 97ms)
+ GET /api/teachers 200 in 99ms (compile: 2ms, render: 96ms)
+ GET /api/students 200 in 265ms (compile: 1996µs, render: 263ms)
+ GET /api/chapters?course=6953ba2ba122ae3998d48040 200 in 428ms (compile: 1715µs, render: 426ms)
+ GET /api/exams?limit=100 200 in 353ms (compile: 1867µs, render: 351ms)
+ GET /api/categories? 200 in 446ms (compile: 3ms, render: 444ms)
+ GET /api/teachers 200 in 112ms (compile: 5ms, render: 107ms)
+ GET /api/assignments 200 in 481ms (compile: 5ms, render: 476ms)
+ GET /api/chapters? 200 in 481ms (compile: 3ms, render: 478ms)
+ GET /api/courses/6953ba2ba122ae3998d48040 200 in 214ms (compile: 6ms, render: 207ms)
+ GET /api/teachers 200 in 96ms (compile: 3ms, render: 93ms)
+ GET /api/lessons? 200 in 385ms (compile: 8ms, render: 377ms)
+ GET /api/teachers 200 in 102ms (compile: 1440µs, render: 101ms)
+ GET /api/teachers 200 in 98ms (compile: 6ms, render: 92ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:39517) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/chapters?course=6953ba2ba122ae3998d48040 200 in 410ms (compile: 3ms, render: 407ms)
+ GET /api/categories? 200 in 408ms (compile: 2ms, render: 406ms)
+ GET /api/categories? 200 in 435ms (compile: 1273µs, render: 434ms)
+ GET /api/auth/session 200 in 120ms (compile: 97ms, render: 24ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:40666) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ GET /api/auth/session 200 in 226ms (compile: 205ms, render: 22ms)
+MONGODB_URI mongodb+srv://codezyneRifat:txaIcDXdhb@cluster0.lyutjz9.mongodb.net/hhhjhjhjhjjh?retryWrites=true&w=majority&appName=Cluster0
+(node:41058) [MONGOOSE] Warning: Duplicate schema index on {"phone":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+(Use `node --trace-warnings ...` to show where the warning was created)
